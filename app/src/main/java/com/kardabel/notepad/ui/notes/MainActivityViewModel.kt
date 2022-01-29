@@ -19,8 +19,8 @@ class MainActivityViewModel @Inject constructor(
     private val applicationDispatchers: ApplicationDispatchers
 ) : ViewModel() {
 
-    val allNotes: LiveData<List<NoteViewState>> = noteRepository.getAllNotes().map { notes ->
-        notes.map {
+    val allNotes: LiveData<List<NoteViewState>> = noteRepository.getAllNotes().map {
+        it.map {
             NoteViewState(
                 it.title,
                 it.text,

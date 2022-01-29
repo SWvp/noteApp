@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = noteAdapter
 
-        noteViewModel.allNotes.observe(this) { notes ->
-            notes.let { noteAdapter.submitList(it) }
+        noteViewModel.allNotes.observe(this) {
+            it.let { noteAdapter.submitList(it) }
         }
 
         noteAdapter.setOnItemClickedListener(
