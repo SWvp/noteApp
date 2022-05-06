@@ -1,4 +1,4 @@
-Note pad application
+Note application
 
 It's an exercise to familiarize myself with Kotlin
 
